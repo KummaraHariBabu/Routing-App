@@ -27,6 +27,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: start;
   gap: 10px;
 }
 
@@ -383,6 +384,9 @@ strong {
   .app {
     margin-top: 0;
   }
+  .sectionWrapper div {
+    width: 100%;
+  }
   .navigationWrapper {
     width: 100%;
     display: flex;
@@ -396,7 +400,7 @@ strong {
     text-decoration: none;
     color: maroon;
     font-size: large;
-    font-weight: 100;
+    font-weight: bold;
   }
   .card img {
     width: 8rem;
@@ -404,6 +408,7 @@ strong {
   .aboutInformation {
     width: 100%;
     padding: 0 10px;
+    gap: 7px;
   }
   .personnelWrapper {
     display: flex;
@@ -447,9 +452,6 @@ strong {
     padding: 5px 10px;
     font-size: 14px;
   }
-  .aboutInformation {
-    gap: 7px;
-  }
 
   .aboutInformation h1 {
     font-size: 22px;
@@ -464,11 +466,19 @@ strong {
     line-height: 1.3;
   }
 
-  .comparisonTable {
-    font-size: 15px;
-    overflow: scroll;
+  .tableWrapper {
+    overflow-x: auto;
   }
 
+  .comparisonTable {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .comparisonTable th,
+  .comparisonTable td {
+    padding: 6px;
+  }
   .comparisonTable tr:hover {
     background-color: initial;
   }

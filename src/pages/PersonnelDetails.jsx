@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { createContext } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 // import Personnel from "./Personnel";
 
@@ -16,7 +16,7 @@ const PersonnelDetails = () => {
   // const { state: person } = useLocation();
 
   //for fetching the corresponding data with id
-  const getPerson = () => {
+  useEffect(() => {
     fetch(`https://reqres.in/api/users/${id}`)
       .then((res) => {
         if (!res.ok) {
@@ -32,10 +32,7 @@ const PersonnelDetails = () => {
         console.log(data);
       })
       .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    getPerson();
-  }, []);
+  });
 
   if (error) {
     return <NotFound />;
