@@ -1,0 +1,25 @@
+import React from "react";
+import courses from "../data/data";
+const Courses = () => {
+  return (
+    <div className="courseWrapper">
+      <h1>OUR COURSES</h1>
+      <div className="iconWrapper">
+        {courses.map((course,index) => {
+          const {  name, img, text } = course;
+          return (
+            <div className="card" key={index}>
+              <img src={img} alt="img" />
+              <div>
+                <h5>{name}</h5>
+                <p>{text}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Courses;
