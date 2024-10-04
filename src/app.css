@@ -95,6 +95,9 @@
   margin-top: 32px;
   gap: 32px;
 }
+.courseDetail {
+  width: 90%;
+}
 .iconWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -360,7 +363,13 @@ h6 {
 strong {
   color: yellowgreen;
 }
-
+.tableWrapper {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 768px) {
   h1,
   h2 {
@@ -377,6 +386,9 @@ strong {
   p {
     font-size: 14px;
   }
+  .sectionWrapper > div {
+    overflow: auto;
+  }
 
   .logo {
     display: none;
@@ -384,9 +396,7 @@ strong {
   .app {
     margin-top: 0;
   }
-  .sectionWrapper div {
-    width: 100%;
-  }
+
   .navigationWrapper {
     width: 100%;
     display: flex;
