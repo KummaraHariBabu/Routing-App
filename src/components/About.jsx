@@ -1,6 +1,57 @@
 import React from "react";
 
 const About = () => {
+  const comparisionDataHeaderData = [
+    "Feature",
+    "Online Courses",
+    "Mentoring",
+    "Self-Learning",
+  ];
+  const comparisonData = [
+    {
+      feature: "Structure",
+      online: "Highly structured",
+      mentoring: "Semi-structured",
+      selfLearning: "No structure",
+    },
+    {
+      feature: "Interaction",
+      online: "Limited",
+      mentoring: "High",
+      selfLearning: "None",
+    },
+    {
+      feature: "Cost",
+      online: "Varies (free to expensive)",
+      mentoring: "Often expensive",
+      selfLearning: "Usually free",
+    },
+    {
+      feature: "Personalization",
+      online: "General",
+      mentoring: "Highly personalized",
+      selfLearning: "Personalized but unguided",
+    },
+    {
+      feature: "Pacing",
+      online: "Self-paced",
+      mentoring: "Guided, mentor-driven",
+      selfLearning: "Self-paced",
+    },
+    {
+      feature: "Feedback",
+      online: "Minimal feedback",
+      mentoring: "Regular, direct feedback",
+      selfLearning: "Minimal feedback",
+    },
+    {
+      feature: "Best For",
+      online: "Structured learners",
+      mentoring: "Personal guidance seekers",
+      selfLearning: "Self-motivated learners",
+    },
+  ];
+
   return (
     <div className="aboutInformation">
       <h1>Online Learning: Courses, Mentoring, and Self-Learning</h1>
@@ -78,55 +129,20 @@ const About = () => {
         <table className="comparisonTable">
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>Online Courses</th>
-              <th>Mentoring</th>
-              <th>Self-Learning</th>
+              {comparisionDataHeaderData.map((head) => (
+                <th>{head}</th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Structure</td>
-              <td>Highly structured</td>
-              <td>Semi-structured</td>
-              <td>No structure</td>
-            </tr>
-            <tr>
-              <td>Interaction</td>
-              <td>Limited</td>
-              <td>High</td>
-              <td>None</td>
-            </tr>
-            <tr>
-              <td>Cost</td>
-              <td>Varies (free to expensive)</td>
-              <td>Often expensive</td>
-              <td>Usually free</td>
-            </tr>
-            <tr>
-              <td>Personalization</td>
-              <td>General</td>
-              <td>Highly personalized</td>
-              <td>Personalized but unguided</td>
-            </tr>
-            <tr>
-              <td>Pacing</td>
-              <td>Self-paced</td>
-              <td>Guided, mentor-driven</td>
-              <td>Self-paced</td>
-            </tr>
-            <tr>
-              <td>Feedback</td>
-              <td>Minimal feedback</td>
-              <td>Regular, direct feedback</td>
-              <td>Minimal feedback</td>
-            </tr>
-            <tr>
-              <td>Best For</td>
-              <td>Structured learners</td>
-              <td>Personal guidance seekers</td>
-              <td>Self-motivated learners</td>
-            </tr>
+            {comparisonData.map((row, index) => (
+              <tr key={index}>
+                <td>{row.feature}</td>
+                <td>{row.online}</td>
+                <td>{row.mentoring}</td>
+                <td>{row.selfLearning}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
