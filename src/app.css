@@ -235,9 +235,11 @@
   font-size: larger;
   font-weight: bolder;
 }
-.navigationWrapper a.active {
+.navigationWrapper a.active,
+.btnGroup a.active {
   color: green;
 }
+
 .logo {
   width: 75px;
   mix-blend-mode: darken;

@@ -1,22 +1,21 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import {  NavLink, Outlet } from "react-router-dom";
 
 const Paths = () => {
   return (
     <div className="pathWrapper">
-      <h3>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet deserunt
-        incidunt animi debitis voluptatem
-      </h3>
+      <h3>Dive into the World of Development</h3>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat qui
-        cumque, praesentium possimus natus nam, alias illum aliquam est officiis
-        quisquam ipsum reprehenderit, similique commodi laborum quibusdam quas
-        molestias. Accusamus.
+        Embark on an exciting journey through the realms of software
+        development! Whether you're passionate about creating stunning user
+        experiences with Frontend development or eager to master the intricacies
+        of Backend technologies, this platform offers the guidance and resources
+        you need. Choose your path and start building the future today!
       </p>
+
       <div className="btnGroup">
-        <Link to="frontend">FrontEnd</Link>
-        <Link to="backend"> BackeEnd</Link>
+        <NavLink to="frontend">FrontEnd</NavLink>
+        <NavLink to="backend"> BackeEnd</NavLink>
       </div>
       <Outlet />
     </div>
